@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            font-size: 25px;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список користувачів</h1>
+    <table >
+        <tr>
+            <td>Ім'я</td>
+            <td>Прізвище</td>
+            <td>Пошта</td>
+            <td>Адреса</td>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.adress}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
